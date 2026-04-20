@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About  SKYSCRAPERS</title>
+  <link rel="stylesheet" href="https://use.typekit.net/ftc8rtb.css"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .about-main {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 4rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 120px 3rem 4rem;
+      align-items: start;
+    }
+
+    .about-left, .about-right {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+
+    .about-section-title {
+      font-family: 'futura-pt', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #0078BF;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .about-text {
+      font-family: 'futura-pt', sans-serif;
+      font-size: 0.92rem;
+      line-height: 1.85;
+      color: #fff;
+      font-weight: 300;
+    }
+
+    .how-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .how-list li {
+      font-family: 'futura-pt', sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #fff;
+      padding-bottom: 0.9rem;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    .how-list .how-label {
+      display: block;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 0.82rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .contact-block {
+      margin-top: 2rem;
+      padding-top: 1.4rem;
+      border-top: 1px solid #1a1a1a;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      font-family: 'futura-pt', sans-serif;
+    }
+    .contact-name {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #fff;
+    }
+    .contact-row {
+      font-size: 0.85rem;
+      color: #fff;
+      letter-spacing: 0.04em;
+    }
+    .contact-row a { color: #0078BF; text-decoration: none; }
+    .contact-row a:hover { text-decoration: underline; }
+
+    @media (max-width: 820px) {
+      .about-main {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        padding: 100px 1.5rem 3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" role="navigation">
+    <a href="index.html" class="nav-logo">SKYSCRAPERS</a>
+    <ul class="nav-links">
+      <li><a href="archive.html">Archive</a></li>
+      <li><a href="timeline.html">Timeline</a></li>
+      <li><a href="height.html">Height comparison</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main class="about-main">
+    <div class="about-left">
+      <p class="about-section-title">About the Archive</p>
+      <p class="about-text">
+        This is an archive of the world's most significant skyscrapers, organized by region and examined not just as feats of engineering, but as cultural documents that encode ambition, identity, and the specific historical moment in which they were built. Each building in this collection tells a story about the society that made it: who held power, what they wanted the world to see, and how they chose to reach toward the sky.
+      </p>
+      <p class="about-text">
+        The 25 buildings featured here were selected based on their architectural innovation, cultural impact, and representation across diverse geographies. Rather than chasing records for mere height, this collection prioritizes structures that have fundamentally changed how we build, how cities function, and how we understand vertical space. Some are pioneers of their era, introducing new materials, structural systems, or design philosophies. Others became symbols of economic power, national ambition, or urban transformation. All of them represent pivotal moments in the ongoing conversation between humanity and the sky.
+      </p>
+      <p class="about-text">
+        The visualizations presented here, organized by timeline, height comparison, and geographic region, shows different lenses through which to examine these buildings. The timeline shows the progression of skyscraper development across the past three decades, revealing how architectural ambition has evolved. The height comparison strips away context to reveal pure verticality, showing the dramatic differences in scale. The regional view grounds these structures in their urban and cultural contexts, demonstrating how geography shapes architectural identity.
+      </p>
+    </div>
+
+    <aside class="about-right">
+      <p class="about-section-title">How to Use</p>
+      <ul class="how-list">
+        <li>
+          <span class="how-label">Archive</span>
+          Browse all 25 buildings by region. Click a region to open the map and explore its buildings through pins.
+        </li>
+        <li>
+          <span class="how-label">Timeline</span>
+          Scroll chronologically through the past century of skyscraper construction.
+        </li>
+        <li>
+          <span class="how-label">Height Comparison</span>
+          All 25 buildings drawn to scale on a shared ground line. Scroll horizontally to compare.
+        </li>
+        <li>
+          <span class="how-label">Building Pages</span>
+          Click any pin, card, or silhouette to open the building's full profile with images and data.
+        </li>
+      </ul>
+
+      <div class="contact-block">
+        <p class="about-section-title">Contact</p>
+        <span class="contact-name">Seungwon Bang</span>
+        <span class="contact-row">Email: <a href="mailto:bbang@ocadu.ca">bbang@ocadu.ca</a></span>
+        <span class="contact-row">Phone: <a href="tel:+14373608514">437-360-8514</a></span>
+      </div>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

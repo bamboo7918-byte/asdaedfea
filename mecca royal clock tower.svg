@@ -1,0 +1,44 @@
+<svg width="200" height="800" viewBox="0 0 200 800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="800" fill="#000000"/>
+  
+  <g fill="#0078BF">
+    <path d="M40 790 L50 720 L150 720 L160 790 Z" />
+    <rect x="55" y="700" width="90" height="20" />
+    
+    <rect x="65" y="350" width="70" height="350" />
+    
+    <g fill="#000000">
+      <rect x="72" y="350" width="1.5" height="350" />
+      <rect x="80" y="350" width="1.5" height="350" />
+      <rect x="88" y="350" width="1.5" height="350" />
+      <rect x="99.25" y="350" width="1.5" height="350" />
+      <rect x="110" y="350" width="1.5" height="350" />
+      <rect x="118" y="350" width="1.5" height="350" />
+      <rect x="126" y="350" width="1.5" height="350" />
+    </g>
+    
+    <rect x="62" y="320" width="76" height="30" />
+    <rect x="60" y="220" width="80" height="100" />
+    
+    <path d="M60 220 L140 220 L130 180 L70 180 Z" />
+    <path d="M70 180 L130 180 L100 120 Z" />
+    
+    <rect x="99" y="50" width="2" height="100" />
+    <circle cx="100" cy="140" r="3" />
+    <circle cx="100" cy="120" r="2.5" />
+    <circle cx="100" cy="100" r="2" />
+    <circle cx="100" cy="80" r="1.5" />
+    
+    <path d="M100 15 
+             C118 15, 125 35, 125 55 
+             C125 75, 115 85, 100 85 
+             C110 85, 115 70, 115 55 
+             C115 40, 110 15, 100 15 Z" />
+  </g>
+  
+  <g fill="#000000">
+    <rect x="65" y="600" width="70" height="1" />
+    <rect x="65" y="500" width="70" height="1" />
+    <rect x="65" y="400" width="70" height="1" />
+  </g>
+</svg>

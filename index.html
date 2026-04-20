@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SKYSCRAPERS</title>
+  <link rel="stylesheet" href="https://use.typekit.net/ftc8rtb.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <nav class="nav" role="navigation">
+    <a href="index.html" class="nav-logo">SKYSCRAPERS</a>
+    <ul class="nav-links">
+      <li><a href="archive.html">Archive</a></li>
+      <li><a href="timeline.html">Timeline</a></li>
+      <li><a href="height.html">Height comparison</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main class="home-main">
+    <div class="hero-img-wrap">
+      <div class="hero-overlay"></div>
+
+
+
+      <div class="hero-content">
+
+        <h1 class="hero-title">SKYSCRAPERS</h1>
+        <p class="hero-sub">A global archive of significant tall structures, twenty-five-building wtih  photographic building cards and informations.</p>
+        <div class="hero-cta-row">
+          <a href="archive.html" class="hero-cta">Explore Archive</a>
+          <a href="height.html" class="hero-secondary">Compare Heights</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- featured buildings section -->
+    <section class="featured">
+      <h2 class="section-title">Buildings</h2>
+      <div class="card-grid" id="card-grid"></div>
+    </section>
+
+  </main>
+
+  
+  <script src="buildings.js"></script>
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      const grid = document.getElementById('card-grid');
+      if (!grid || typeof BUILDINGS === 'undefined') return;
+      const list = [...BUILDINGS].sort((a, b) => b.height - a.height);
+      list.forEach((b) => {
+        const card = document.createElement('a');
+        card.className = 'bld-card';
+        card.href = 'building.html?id=' + b.id;
+        card.setAttribute('data-building-id', b.id);
+
+        const folderPath = b.folder || b.name.toUpperCase();
+        const src = (b.images && b.images[0]) || (typeof BUILDING_IMAGES !== 'undefined' ? BUILDING_IMAGES[b.id] : '');
+        const imgPath = src ? (encodeURIComponent(folderPath) + '/' + encodeURIComponent(src)) : '';
+        const floorsText = (b.floors && b.floors > 0) ? String(b.floors) : '—';
+
+        card.innerHTML = `
+          <div class="bld-card-img"${imgPath ? ` style="background-image:linear-gradient(180deg,rgba(5,8,12,0.08),rgba(5,8,12,0.72)),url('${imgPath}');background-size:cover;background-position:center;"` : ''}></div>
+          <h3 class="bld-card-title">${b.name}</h3>
+          <p class="bld-card-loc">${b.city}, ${b.country}</p>
+          <div class="bld-card-stats">
+            <div><span class="bld-card-val">${b.height}M</span><span class="bld-card-lbl">Height</span></div>
+            <div><span class="bld-card-val">${b.year}</span><span class="bld-card-lbl">Year</span></div>
+            <div><span class="bld-card-val">${floorsText}</span><span class="bld-card-lbl">Floors</span></div>
+          </div>
+          <span class="bld-card-link">Click to view →</span>
+        `;
+        grid.appendChild(card);
+      });
+    })();
+  </script>
+</body>
+</html>
